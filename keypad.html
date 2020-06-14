@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Key Panel</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		* {
+			font-family: monospace;
+			box-sizing: border-box;
+			font-size: 25px;
+		}
+
+		body {
+			background: #FAFAFA;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 40px;
+		}
+
+		.panel {
+			display: inline-grid;
+			background: black;
+			grid-gap: 10px;
+			padding: 10px;
+			grid-template-columns: repeat(3, 60px);
+			grid-template-rows: repeat(3, 60px);
+			box-shadow: 1px 1px 10px rgba(0,0,0,0.2);
+		}
+
+		.key {
+			display: grid;
+			align-items: center;
+			justify-content: center;
+			font-size: 25px;
+			background: rgb(150,255,150);
+			border: 2px solid darkgray;
+		}
+
+		.key:hover {
+			background: rgb(200,255,200);
+			cursor: pointer;
+		}
+
+		.content {
+			text-align: center;
+		}
+
+		#recording {
+			display: grid;
+			align-items: center;
+			justify-content: center;
+			font-size: 25px;
+			padding: 15px;
+			background: rgb(150,150,255);
+			border: 2px solid darkgray;
+			border-radius: 5px;
+			
+			margin:auto;
+			margin-top: 50px;
+		}
+
+		#recording:hover {
+			background: rgb(200,200,255);
+			cursor: pointer;
+		}
+
+		#stop {
+			display: grid;
+			align-items: center;
+			justify-content: center;
+			font-size: 25px;
+			padding: 15px;
+			background: rgb(255,150,150);
+			border: 2px solid darkgray;
+			border-radius: 5px;
+			
+			margin:auto;
+			margin-top: 10px;
+		}
+
+		#stop:hover {
+			background: rgb(255,200,200);
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<h1>Key Panel</h1>
+		<div class="panel">
+			<div class="key" id="key1" data-value="1">1</div>
+			<div class="key" id="key2" data-value="2">2</div>
+			<div class="key" id="key3" data-value="3">3</div>
+			<div class="key" id="key4" data-value="4">4</div>
+			<div class="key" id="key5" data-value="5">5</div>
+			<div class="key" id="key6" data-value="6">6</div>
+			<div class="key" id="key7" data-value="7">7</div>
+			<div class="key" id="key8" data-value="8">8</div>
+			<div class="key" id="key9" data-value="9">9</div>
+		</div>
+		<p>Current Attempt:</p>
+		<p class="currentAttempt">None</p>
+		<button id="recording">Play Entire Recording🔉</button>
+		<button id="stop">Stop and Reset Recording</button>
+		
+		
+	</div>
+	
+	<audio src="sound1.wav" id="sound1"></audio>
+	<audio src="sound2.wav" id="sound2"></audio>
+	<audio src="sound3.wav" id="sound3"></audio>
+	<audio src="sound4.wav" id="sound4"></audio>
+	<audio src="sound5.wav" id="sound5"></audio>
+	<audio src="sound6.wav" id="sound6"></audio>
+	<audio src="sound7.wav" id="sound7"></audio>
+	<audio src="sound8.wav" id="sound8"></audio>
+	<audio src="sound9.wav" id="sound9"></audio>
+	<audio src="keycode.wav" id="keycodeSound"></audio>
+
+	<script type="text/javascript" src="code.js"></script>
+</body>
+</html>
